@@ -10,9 +10,11 @@ class DetectLanguage:
     def __init__(self, fenetre):
 
         fenetre.title("Quelle langue parles tu ?")
+        fenetre.configure(bg='grey')
 
         text = Label(fenetre, text="Texte :")
         text.place(x=20, y=20)
+        text.configure(bg='grey')
 
         self.text_unkown_language = StringVar()
         entree = Entry(
@@ -24,6 +26,7 @@ class DetectLanguage:
         bouton.place(x=260, y=150)
 
         detection = Label(fenetre, text="Detection :")
+        detection.configure(bg='grey')
         detection.place(x=20, y=200)
 
         self.language = StringVar()
